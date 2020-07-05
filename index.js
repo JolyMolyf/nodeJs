@@ -1,3 +1,4 @@
+var Port =process.env.PORT || 5000;
 var express = require('express');
 const User = require('./User.js');
 var fs= require('fs');
@@ -31,6 +32,6 @@ myReader.on('data' , function (chunk) {
 
 app.listen({
 	host: 'localhost',
-	port: 5003,
+	port: Port,
 	exclusive: true
 });
