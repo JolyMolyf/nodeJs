@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
 
 
-app.get('/home', function(req,  res){
+app.get('/', function(req,  res){
 	res.render('home');
 });
 
@@ -24,5 +24,5 @@ app.get('/profile/:name', function(req, res){
 
 
 app.listen(Port, function(){
-	console.log("works"); 
+	console.log("works");
 });
